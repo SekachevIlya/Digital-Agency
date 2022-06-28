@@ -116,6 +116,12 @@ h6 {
     }
 }
 
+.h5 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+}
+
 .container {
     max-width: 1065px;
     margin: 0 auto;
@@ -134,4 +140,26 @@ h6 {
     line-height: 28px;
     text-align: center;
     text-transform: uppercase;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    // flex-wrap: wrap;
+    // margin: 0 -89px;
+    >.col {
+        padding: 0 89px;
+        width: 100%;
+        flex-basis: 100%;
+        &-md-4 {
+            @include bp($md) {
+                width: 19%;
+            }
+        }
+        &-md-3 {
+            @include bp($md) {
+                width: 12%;
+            }
+        }
+    }
 }

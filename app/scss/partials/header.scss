@@ -30,6 +30,11 @@
                 }
             }
         }
+        .menu__btn {
+            @include bp($md) {
+                display: none;
+            }
+        }
     }
     .header__section {
         display: block;
@@ -47,10 +52,12 @@
             .content__text {
                 padding-bottom: 39px;
                 padding-top: 24px;
-                text-align: center;
                 font-weight: 400;
                 line-height: 16px;
                 line-height: 28px;
+                @include bp-max($md) {
+                    text-align: center;
+                }
                 @include bp($md) {
                     font-size: 18px;
                 }
